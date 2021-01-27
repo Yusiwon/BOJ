@@ -8,30 +8,29 @@ public class p2609_최대공약수와최소공배수 {
 		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
-		int n1 = input.nextInt();
-		int n2 = input.nextInt();
-		int number = 0;
+		long n1 = input.nextInt();
+		long n2 = input.nextInt();
+
+		long cdg = cdg(Math.max(n1, n2), Math.min(n1, n2));
+		System.out.println(cdg);
 		
-		int max = 1, min =1;
+		long csg = csg(n1, n2, cdg);
+		System.out.println(csg);
 		
-		if(n1 >= n2) number = n1;
-		else	number = n2;
-		
-		for(int i = 2; i < number; i++) {
-			while(n1 % i == 0 && n2 % i == 0) {
-				max = max * i;
-				min = min * i;
-				n1 = n1 / i;
-				n2 = n2 / i;
-			}
+	}
+	
+	public static long cdg(long a, long b) {
+		while(b > 0) {
+			long temp = a;
+			a = b;
+			b = temp % b;
 		}
-		
-		min  = min * n1 * n2;
-		
-		System.out.println(max);
-		System.out.println(min);
-		
-		input.close();
+		return a;
+	}
+	
+	public static long csg(long a, long b, long cdg) {
+		long result = (a * b) / cdg;
+		return result;
 	}
 
 }
