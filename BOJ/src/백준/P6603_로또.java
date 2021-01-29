@@ -29,6 +29,7 @@ public class P6603_로또 {
 			}
 
 			lotto(0, 0);
+			System.out.println();
 		}
 	}
 	
@@ -44,6 +45,7 @@ public class P6603_로또 {
 			System.out.println();
 			return;
 		}
+
 		for(int i = start; i < size; i++) {
 			visit[i] = true;
 			lotto(i+1, depth+1);
