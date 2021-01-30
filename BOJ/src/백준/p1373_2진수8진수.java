@@ -19,12 +19,11 @@ public class p1373_2진수8진수 {
 			str = "0" + str;
 		}
 
-		String result = ""; String sample = ""; int n = 0;
+		String result = ""; int n = 0;
 		for(int i = 0; i < str.length(); i += 3) {
-			sample = str.substring(i, i+3);
-			n = (sample.charAt(0) - '0') * 4
-					+ (sample.charAt(1) - '0') * 2
-					+ (sample.charAt(2) - '0');
+			n = (str.charAt(i) - '0') * 4
+					+ (str.charAt(i+1) - '0') * 2
+					+ (str.charAt(i+2) - '0');
 			result = result + String.valueOf(n);
 		}
 		
