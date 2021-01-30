@@ -1,37 +1,41 @@
 package 백준;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class p1934_최소공배수 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = Integer.parseInt(br.readLine());
 		
-
-		Scanner input = new Scanner(System.in);
-		int size = input.nextInt();
-
-		for(int s = 0; s < size; s++) {
-			int min = 1, number = 0;
-			int first = input.nextInt();
-			int second = input.nextInt();
-
-			if(first == 1) min = second;
-			else if(second == 1) min = first;
-			else {
-				if(first >= second) number = first;
-				else number = second;
-
-				for(int i = 2; i < number; i++) {
-					if(first % i == 0 && second % i == 0) {
-						min = min * i;
-						first = first / i;
-						second = second / i;
-					}
-				}
-				min  = min * first * second;
-			}
-			System.out.println(min);
+		int a, b;
+		for(int i = 0; i < t; i++) {
+			String[] arr = br.readLine().split(" ");
+			a = Integer.parseInt(arr[0]);
+			b = Integer.parseInt(arr[1]);
+			
+			int cdg = cdg(Math.max(a, b), Math.min(a, b));
+			System.out.println(csg(a, b, cdg));
 		}
+
+	}
+	
+	public static int cdg(int a, int b) {
+		while(b > 0) {
+			int temp = a;
+			a = b;
+			b = temp % b;
+		}
+		return a;
+	}
+	
+	public static int csg(int a, int b, int cdg) {
+		int temp = (a * b) / cdg;
+		return temp;
 	}
 
 }
