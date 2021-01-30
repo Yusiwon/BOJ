@@ -19,16 +19,16 @@ public class p1373_2진수8진수 {
 			str = "0" + str;
 		}
 
-		String result = ""; int n = 0;
+		StringBuilder sb = new StringBuilder();
+		int n = 0;
 		for(int i = 0; i < str.length(); i += 3) {
 			n = (str.charAt(i) - '0') * 4
 					+ (str.charAt(i+1) - '0') * 2
 					+ (str.charAt(i+2) - '0');
-			result = result + String.valueOf(n);
+			sb.append(n);
 		}
 		
-		System.out.println(result);
+		System.out.println(sb.toString());
 	}
 
 }
-
