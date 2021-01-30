@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class p2609_최대공약수와최소공배수 {
 
 	public static void main(String[] args) {
-		
+		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
 		int n1 = input.nextInt();
