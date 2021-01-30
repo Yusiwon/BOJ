@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class p1934_최소공배수 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		Scanner input = new Scanner(System.in);
 		int size = input.nextInt();
