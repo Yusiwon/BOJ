@@ -9,7 +9,7 @@ public class p1929_소수구하기 {
 	public static int start;
 	public static int end;
 	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
+		// 에라토스테네스의 체
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] str = br.readLine().split(" ");
