@@ -27,7 +27,7 @@ public class p11005_진법변환2 {
 			n /= b;
 		}
 		
-		System.out.println(sb.toString());
+		System.out.println(sb.reverse());
 
 	}
 
