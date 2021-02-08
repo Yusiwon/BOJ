@@ -1,31 +1,31 @@
 package 백준;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class p2164_카드2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
 
-		Scanner input = new Scanner(System.in);
-		int n = input.nextInt();
-
-		List<Integer> list = new ArrayList<>();
-		for(int i = 1; i <= n; i++) {
-			list.add(i);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int card = Integer.parseInt(br.readLine());
+		
+		Queue<Integer> q = new LinkedList<>();
+		
+		for(int i = 1; i <= card; i++) {
+			q.add(i);
 		}
-
-		while(list.size() > 1) {
-
-			list.remove(0);
-			int back = list.get(0);
-			list.remove(0);
-			list.add(back);
+		
+		while(q.size() > 1) {
+			q.poll();
+			q.add(q.poll());
 		}
-		System.out.println(list.get(0));
-		input.close();
+		
+		System.out.println(q.poll());
 	}
 
 }
