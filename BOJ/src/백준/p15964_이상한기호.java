@@ -13,10 +13,10 @@ public class p15964_이상한기호 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int first = Integer.parseInt(st.nextToken());
-		int second = Integer.parseInt(st.nextToken());
+		long first = Integer.parseInt(st.nextToken());
+		long second = Integer.parseInt(st.nextToken());
 		
-		int result =  (first + second)*(first-second);
+		long result =  (first + second)*(first-second);
 		
 		System.out.println(result);
 	}
