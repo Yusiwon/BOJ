@@ -20,7 +20,7 @@ public class p2566_ÃÖ´ñ°ª {
 					y=j;
 				}
 			}
-			input.nextLine();
+			
 		}
 		
 		
