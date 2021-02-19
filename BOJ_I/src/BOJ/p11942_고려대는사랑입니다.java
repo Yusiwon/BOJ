@@ -1,4 +1,4 @@
-package 백준;
+package BOJ;
 
 public class p11942_고려대는사랑입니다 {
 

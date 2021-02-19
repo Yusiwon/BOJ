@@ -1,4 +1,4 @@
-package 백준;
+package BOJ;
 import java.util.Scanner;
 
 public class p1032_명령프롬프트 {

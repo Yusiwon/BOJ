@@ -1,10 +1,10 @@
-package ¹éÁØ;
+package BOJ;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class p10845_Å¥ {
+public class p10845_í {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

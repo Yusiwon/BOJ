@@ -1,4 +1,4 @@
-package น้มุ;
+package BOJ;
 
 public class p1316 {
 
