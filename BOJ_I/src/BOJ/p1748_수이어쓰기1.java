@@ -1,4 +1,4 @@
-package 백준;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -43,6 +43,7 @@ public class p1748_수이어쓰기1 {
 				count += 9;
 			}
 		}
+		
 		System.out.println(count);
 		br.close();
 	}
