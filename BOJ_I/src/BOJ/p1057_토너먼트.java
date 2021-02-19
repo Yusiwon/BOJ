@@ -1,4 +1,4 @@
-package น้มุ;
+package BOJ;
 
 import java.util.Scanner;
 
