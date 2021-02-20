@@ -10,6 +10,7 @@ public class p1735_ºĞ¼öÇÕ {
         String[] a = br.readLine().split(" ");
         String[] b = br.readLine().split(" ");
 
+
         int as = Integer.parseInt(a[0]);
         int am = Integer.parseInt(a[1]);
         int bs = Integer.parseInt(b[0]);
