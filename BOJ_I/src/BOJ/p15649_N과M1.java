@@ -8,6 +8,8 @@ public class p15649_N°úM1 {
 
     static int[] arr;
     static boolean[] visit;
+    static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -19,15 +21,17 @@ public class p15649_N°úM1 {
         visit = new boolean[n];
 
         dfs(n, size, 0);
+
+        System.out.println(sb.toString());
     }
 
     public static void dfs(int n, int size, int depth) {
 
         if(depth == size) {
             for(int i = 0; i < size; i++) {
-                System.out.print(arr[i] + " ");
+                sb.append(arr[i]).append(" ");
             }
-            System.out.println();
+            sb.append('\n');
             return;
         }
 
