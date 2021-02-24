@@ -1,36 +1,41 @@
 package BOJ;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.Buffer;
 import java.util.Scanner;
 
 public class p11441_합구하기 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int size = Integer.parseInt(br.readLine());
+		String[] str = br.readLine().split(" ");
+		int[] arr = new int[size];
 
-		Scanner input = new Scanner(System.in);
-		int n = input.nextInt();
-		input.nextLine();
-		
-		int[] arr = new int[n+1];
-
-		for(int i = 1; i < n+1; i++) {
-			arr[i] = input.nextInt();
+		for (int i = 0; i < size; i++) {
+			arr[i] = Integer.parseInt(str[i]);
 		}
-		input.nextLine();
-		int m = input.nextInt();
-		
-		for(int i = 0; i < m; i++) {
-			int s = input.nextInt();
-			int l = input.nextInt();
-			
-			
+
+		int test = Integer.parseInt(br.readLine());
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < test; i++) {
+			String[] temp = br.readLine().split(" ");
+			int start = Integer.parseInt(temp[0]);
+			int end = Integer.parseInt(temp[1]);
+
 			int sum = 0;
-			for(int j = s; j <= l; j++) {
-				sum += arr[j];
+			for (int j = start; j <= end; j++) {
+				sum += arr[j-1];
 			}
-			
-			System.out.println(sum);
+
+			sb.append(sum).append('\n');
 		}
+
+		System.out.println(sb.toString());
+
 	}
 
 }
