@@ -11,24 +11,29 @@ public class p18870_ÁÂÇ¥¾ĞÃà {
         int n = Integer.parseInt(br.readLine());
 
         int[] arr = new int[n];
-        List<Integer> list = new ArrayList<>();
         String[] str = br.readLine().split(" ");
 
         for(int i = 0; i < n; i++) {
-            int num = Integer.parseInt(str[i]);
-            arr[i] = num;
-            if(!list.contains(num)) {
-                list.add(num);
+            arr[i] = Integer.parseInt(str[i]);
+
+        }
+
+        int[] sort = arr.clone();
+        Arrays.sort(sort);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int index = 0;
+        for(int i = 0; i < n; i++) {
+            if(!map.containsKey(sort[i])) {
+                map.put(sort[i], index++);
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        Collections.sort(list);
-
         for(int i = 0; i < n; i++) {
-            sb.append(list.indexOf(arr[i])).append(" ");
+            sb.append(map.get(arr[i])).append(" ");
         }
 
         System.out.println(sb.toString());
+
     }
 }
