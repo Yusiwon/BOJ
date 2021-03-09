@@ -8,8 +8,8 @@ public class p15963_CASIO {
 		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
-		long n = input.nextInt();
-		long m = input.nextInt();
+		long n = input.nextLong();
+		long m = input.nextLong();
 		
 		input.close();
 		if(n==m)
